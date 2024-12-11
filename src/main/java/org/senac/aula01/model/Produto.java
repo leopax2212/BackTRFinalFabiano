@@ -24,6 +24,11 @@ public class Produto {
     @Column(name = "url_imagem", length = 255) // Nova coluna para armazenar a URL da imagem
     private String url_imagem;
 
+    // No-argument constructor required by Hibernate
+    public Produto() {
+    }
+
+    // Constructor with parameters
     public Produto(Integer id, String nome, String descricao, Double preco, String url_imagem) {
         this.id = id;
         this.nome = nome;
@@ -32,6 +37,7 @@ public class Produto {
         this.url_imagem = url_imagem;
     }
 
+    // Getters and Setters
     public Integer getId() {
         return id;
     }
@@ -71,6 +77,4 @@ public class Produto {
     public void setUrlImagem(String url_imagem) {
         this.url_imagem = url_imagem;
     }
-
-    
 }
